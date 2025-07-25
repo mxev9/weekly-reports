@@ -9,7 +9,7 @@
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
-    "postbuild": "copy dist\\index.html dist\\404.html"
+    "cp dist/index.html dist/404.html || echo 'Skipping 404.html copy on Windows'"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
