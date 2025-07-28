@@ -24,11 +24,7 @@ export default function App() {
         <Sonner />
         <HashRouter>
           <Routes>
-            <Route path="/" element={
-              <div className="text-center mt-10 text-2xl font-bold">
-                Hello from سليمان 👋
-              </div>
-            } />
+            <Route path="/" element={<Index />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </HashRouter>
