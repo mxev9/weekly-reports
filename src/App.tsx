@@ -6,7 +6,7 @@ import {
   QueryClientProvider,
 } from "@tanstack/react-query";
 import {
-  BrowserRouter,
+  HashRouter,
   Routes,
   Route
 } from "react-router-dom";
@@ -22,19 +22,16 @@ export default function App() {
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter>
+        <HashRouter>
           <Routes>
-            <Route
-              path="/"
-              element={
-                <div className="text-center mt-10 text-2xl font-bold">
-                  Hello from سليمان 🧃
-                </div>
-              }
-            />
+            <Route path="/" element={
+              <div className="text-center mt-10 text-2xl font-bold">
+                Hello from سليمان 👋
+              </div>
+            } />
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </TooltipProvider>
     </QueryClientProvider>
   );
